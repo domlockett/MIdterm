@@ -9,7 +9,8 @@ setMethod("likelihood", "Rasch",
             #so its just the product of the PQ function...?
             r<-unlist(probability(raschObj,theta)[2])
             #the product can't be analyzed as a list so we unlist that ish.
-            prod(r)
+            fin<-prod(r)
+            return(fin)
            })
 
 likelihood(dom, theta)

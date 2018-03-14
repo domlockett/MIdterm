@@ -4,9 +4,10 @@ setGeneric("prior", function(theta){
 )
 
 #This is meant to be simple. Just return dnorm. 
-setMethod("prior", "Rasch",
-          function( theta){
+setMethod("prior", signature(theta="numeric"),
+          function(theta){
             #ok nbd just returning the normal curve using dnorm
-            dnorm(theta, 0, 3)
+            p<-dnorm(theta, 0, 3)
+            return(p)
           })
-?dnorm
+prior(theta)
