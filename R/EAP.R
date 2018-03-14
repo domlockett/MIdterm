@@ -1,10 +1,22 @@
-#Now to our final hurdle as far as functions go.
-  #integration and what not. oh no.
+#' EAP
+#'
+#' Returns the value of theta hat calculated in the Prior function
+#'
+#' @param raschObj An object of class Rasch
+#' @param lower The lower limits of integration (-6)
+#' @param upper The upper limits of integration (6)
+#'
+#' @return A value of theta hat specified in the Prior function
+#' @author Dominique Lockett
+#' @note This is a help session file
+#' @export
 setGeneric(name="EAP",
            def=function(raschObj, lower , upper )
            {standardGeneric("EAP")}
 )
-
+#Now to our final hurdle as far as functions go.
+#integration and what not. oh no.
+#' @export
 setMethod("EAP",
           definition=function(raschObj, lower, upper){
             theta<-.2

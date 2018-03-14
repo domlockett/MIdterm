@@ -1,9 +1,21 @@
+#' Calculate the Likelihood of Rasch data
+#'
+#' Returns the likelihood the observed value in the Probability function occurs
+#'
+#' @param raschObj An object of class Rasch
+#' @param theta A numeric representation of a person's ability
+#'
+#' @return The calculated likelihood from Probability function
+#' @author Dominique Lockett
+#' @note This is a help session file
+#' @export
 setGeneric("likelihood", function(raschObj, theta){   
   standardGeneric("likelihood")
 }
 )
 
 #this one looks like less of a personal challenge!, maybe...
+#' @export
 setMethod("likelihood", "Rasch",
           function(raschObj, theta){
             #so its just the product of the PQ function...?

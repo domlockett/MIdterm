@@ -1,11 +1,20 @@
-
-#started at 10:40
-
+#' Rasch Model
+#'
+#' Returns probability that a student gets a question right given their ability, and the difficulty of the question
+#'
+#' @param raschObj An objecto of class Rasch
+#' @param theta A proposed value representing a person's ability
+#'
+#' @return A vector of P and a vector of PQ
+#' @author Dominique Lockett
+#' @note This is a help session file
+#' @export
 setGeneric("probability", function(raschObj, theta){   
   standardGeneric("probability")
 }
 )
 
+#' @export
 #set up the whole deal like an S4 to save the trouble of redoing it all.
 setMethod("probability", "Rasch",
           function(raschObj, theta){
