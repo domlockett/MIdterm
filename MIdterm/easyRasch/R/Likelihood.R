@@ -8,6 +8,8 @@
 #' @return The calculated likelihood from Probability function
 #' @author Dominique Lockett
 #' @note This is a help session file
+#' #' @example 
+#' likelihood(dom, .2)
 #' @export
 setGeneric("likelihood", 
            def=function(raschObj, theta){   

@@ -19,6 +19,8 @@ Returns the likelihood the observed value in the Probability function occurs
 }
 \note{
 This is a help session file
+#' @example 
+likelihood(dom, .2)
 }
 \author{
 Dominique Lockett

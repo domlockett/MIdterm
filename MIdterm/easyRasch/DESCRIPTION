@@ -13,5 +13,5 @@ Collate:
   'Likelihood.R'
   'Prior.R'
   'EAP.R'
-  'Print.R'
+  'Prints.R'
 RoxygenNote: 6.0.1

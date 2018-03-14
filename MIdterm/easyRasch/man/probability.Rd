@@ -20,6 +20,11 @@ Returns probability that a student gets a question right given their ability, an
 \note{
 This is a help session file
 }
+\examples{
+dom<-new("Rasch",name="dom", a=c(4,2,3,4,5,6,7,8,9), y=c(1,1,1,1,1,0,1,1,1))
+probability(dom,.2)
+
+}
 \author{
 Dominique Lockett
 }

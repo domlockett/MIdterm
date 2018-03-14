@@ -7,6 +7,11 @@
 #'
 #' @return A vector of P and a vector of PQ
 #' @author Dominique Lockett
+#' 
+#' @examples
+#' dom<-new("Rasch",name="dom", a=c(4,2,3,4,5,6,7,8,9), y=c(1,1,1,1,1,0,1,1,1))
+#' probability(dom,.2)
+#' 
 #' @note This is a help session file
 #' @export
 setGeneric(name="probability", 
@@ -21,11 +26,7 @@ setMethod("probability",
             theta<-.2
             #set up the whole deal like an S4 to save the trouble of redoing it all.
             #Set up a function which cycles through each row of our dataset and return the evaluation of Rasch formula
-            f<-function(theta) {exp(theta-raschObj@a)/ 1+ exp(theta-raschObj@a)}
-            #Make a dataset that apply can read
-            d<-cbind(raschObj@a)
-            #calculate each value
-            P<-apply(d, 2,f)
+            P<- apply(d, 1, function(d) {return(exp(theta-d)/ 1+ exp(theta-d))})
             #Now we need to also consider y, so we add it to our dataset
             dat<-cbind(raschObj@a, raschObj@y)
             #I can't figure out how to do simple evaluation like above so we manually add the function so 
@@ -35,4 +36,6 @@ setMethod("probability",
             r<-list(P,PQ) 
             names(r)<-c("P","PQ") 
             return(r)})
+
+
 

@@ -8,6 +8,9 @@
 #'
 #' @return A value of theta hat specified in the Prior function
 #' @author Dominique Lockett
+#' #' @example 
+#' EAP(dom, -6,6)
+#' 
 #' @note This is a help session file
 #' @export
 setGeneric(name="EAP",

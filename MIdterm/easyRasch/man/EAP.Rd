@@ -24,4 +24,6 @@ This is a help session file
 }
 \author{
 Dominique Lockett
+#' @example 
+EAP(dom, -6,6)
 }

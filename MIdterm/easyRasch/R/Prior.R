@@ -7,6 +7,10 @@
 #' @return The height of the specified normal curve evaluated at theta
 #' @author Dominique Lockett
 #' @note This is a help session file
+#' @example 
+#' 
+#' prior(.2)
+#' 
 #' @export
 setGeneric("prior", function(theta){   
   standardGeneric("prior")
